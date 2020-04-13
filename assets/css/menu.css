@@ -1,0 +1,189 @@
+/* MENU */
+.menu {
+  height: 600px;
+}
+.image-list-small {
+  font-family: inherit;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 640px;
+  padding-top: 5%;
+
+}
+
+.image-list-small li {
+  display: inline-block;
+  width: 181px;
+  margin: 0 12px 30px;
+}
+
+
+/* Photo */
+
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border: 4px solid #ffffff;
+  outline: 1px solid #d0d0d0;
+  box-shadow: 0 2px 1px #DDD;
+}
+
+.image-list-small .details {
+  margin-top: 13px;
+}
+
+
+/* Title */
+
+.image-list-small .details h3 {
+  display: block;
+  font-size: 16px;
+  margin: 6px 0 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-list-small .details h3 a {
+  color: #303030;
+  text-decoration: none;
+}
+
+.image-list-small .details {
+  display: block;
+  color: #717171;
+  font-size: 11px;
+  font-weight: normal;
+  margin: 0;
+}
+
+table { 
+  width: 750px; 
+  border-collapse: collapse; 
+  margin:50px auto;
+  }
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+  }
+
+th { 
+  background: #3498db; 
+  color: white; 
+  font-weight: bold; 
+  }
+
+td, th { 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 18px;
+  }
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  table { 
+      width: 100%; 
+  }
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr { border: 1px solid #ccc; }
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+  }
+
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+
+}
+
+/*SELECT START*/
+.select-wrapper {
+  position: relative;
+  left: 44%;
+  width: 14%;
+  z-index: 0;
+	display: inline-block; 
+  overflow: hidden; /* this hides the select's drop button */
+  height: auto;
+  padding: 0 15px 0 0; 
+  margin: 0 5px 0 0; 
+  /* this is the new drop button, in image form */
+  border-radius: 5px;
+  border: solid 1px #CCC; 
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#efefef)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #FFF, #efefef); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #FFF, #efefef); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, #FFF, #efefef); /* IE10 */
+  background-image:      -o-linear-gradient(top, #FFF, #efefef); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, #FFF, #efefef);
+  
+  /* PIE.htc - if using, remove 2 'filter' gradients above for proper display in IE7/8 */
+  -pie-background: linear-gradient(#FFF, #efefef); /*PIE*/
+  behavior: url(PIE.htc);
+}
+
+.select-wrapper:before {
+	position: absolute;
+	z-index: 1;
+	content: url(http://www.mightyminnow.com/wp-content/uploads/2013/09/select_arrows.png);
+	top: 50%;
+	right: 10px;
+	margin-top: -9px;
+}
+
+.select-wrapper select { 
+	position: relative;
+	z-index: 2;
+  outline: none;
+  width: 120%; /* this percentage effectively extends the drop down button out of view */
+  padding: 5px 20px 5px 10px;
+  background-color: transparent; /* this hides the selects background making any styling visible from the div */
+  background-image: none; 
+  -webkit-appearance: none; /* this is required for Webkit browsers */ 
+  border:none; 
+  box-shadow: none;
+}

@@ -1,0 +1,92 @@
+.menu-cat{
+    display: inline-block;
+    position: relative;
+    left: 35%;
+    width: 30%;
+}
+.menu-cat li{
+    display: inline;
+    padding: 1px;
+    margin: 1px;
+}
+
+.cat{
+    height:55px;
+    width: 95px;
+    border-radius: 5%;
+    background-color: dodgerblue;
+    color: aliceblue;
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cat:hover{
+    background-color: cornflowerblue;
+}
+
+.grid {
+  width: 100%
+}
+/* clear fix */
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both
+}
+/* ---- .element-item ---- */
+
+.element-item {
+  float: left;
+  display: inline-block;
+  width: 31.6%;
+  height: 150px;
+  min-height: 100px;
+  padding: 25px 10px;
+  color: #262524;
+  background: #FFF5D7;
+  border: 1px solid white;
+}
+
+.element-item > * {
+  margin: 10px;
+}
+
+.element-item .symbol {
+  display: block;
+  font-size: 32px;
+  font-item-description: bold;
+  color: #000
+}
+
+.element-item .price {
+  position: relative;
+  left: 5px;
+  top: 0px;
+  font-size: 24px;
+}
+
+.element-item .addtocart {
+    background-color: steelblue;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.grid h3 {
+    text-align: center;
+}
+
+.cart{
+    background-color: rgb(179, 179, 176);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bolder;
+    height:55px;
+    width: 95px;
+    position: relative;
+    right: -150px;
+    top: 10px;
+}
